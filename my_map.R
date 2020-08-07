@@ -8,7 +8,6 @@
 # Libraries ---------------------------------------------------------------
 library(r2d3maps)
 library(tidyverse)
-# to get county geometries
 library(tigris) 
 library(sf)
 library(rmapshaper) # to simplify the county geometries

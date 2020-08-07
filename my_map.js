@@ -1,5 +1,5 @@
 
-// D3 maps
+// D3 maps!
 
 
 r2d3.onRender(function(json, svg, width, height, options) {
