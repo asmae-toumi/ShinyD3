@@ -1,0 +1,25 @@
+  body {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;;
+    font-size: 12px;
+    width: 960px;
+    height: 500px;
+    margin: 20px auto;
+  }
+  .states {
+    stroke: #fff;
+    fill: none;
+    pointer-events: none;
+  }
+  .counties {
+    stroke: #fff;
+    fill: green;
+    stroke-width: .3px;
+  }
+  .tooltip {
+    background: rgba(0, 0, 0, 0.85);
+    color: #f9f9f9;
+    padding: 8px;
+  }
+  .tooltip h3 {
+    margin: 0px 0px 8px;
+  }
