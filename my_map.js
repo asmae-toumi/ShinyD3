@@ -1,19 +1,12 @@
 
-// D3 maps!
+// D3 maps
 
 
 r2d3.onRender(function(json, svg, width, height, options) {
   
-var color = d3.scaleThreshold()
-  .range(["#fde0dd","#fcc5c0","#fa9fb5","#f768a1","#dd3497","#ae017e","#7a0177","#49006a"])
-  .domain([250, 500, 750, 1000, 1250, 1500, 1750, 2000]);
-
-var tooltip = d3.select("body")
-    .append("div")
-    .attr("class", "tooltip")
-    .style("position", "absolute")
-    .style("z-index", "10")
-    .style("visibility", "hidden");
+  var colorScale = d3.scaleThreshold()
+  .domain([500, 1000, 10000, 100000, 1000000, 10000000])
+  .range(d3.schemeBlues[7]);
 
   var projection = d3.geoAlbersUsa();
 
@@ -41,9 +34,11 @@ var tooltip = d3.select("body")
       .datum(states)
       .attr("class", "feature")
       .attr("d", path);
+   
 
   svg.append("path")
       .datum(topojson.mesh(json, json.objects.states, function(a, b) { return a !== b; }))
       .attr("class", "mesh")
       .attr("d", path);
+      
 });
